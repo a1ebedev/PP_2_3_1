@@ -28,6 +28,7 @@ public class UserDaoImp implements UserDao {
         manager.persist(user);
     }
 
+    @Override
     public void updateUser(int id, User updatedUser) {
         User user1 = manager.find(User.class, id);
         user1.setName(updatedUser.getName());
